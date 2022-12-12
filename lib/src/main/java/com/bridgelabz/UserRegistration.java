@@ -4,13 +4,13 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-	public void passWordRule2() {
+	public void passWordRule3() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter password :  ");
 		String passWord = sc.nextLine();
-		boolean check = Pattern.matches("[A-Z]{1}[a-z]{7,}", passWord);
+		boolean check = Pattern.matches("[A-Z]{1}[a-z]{6,}[0-9]{1}", passWord);
 		if (check)
-			System.out.println("This Password is valid");
+			System.out.println("Perfect! password");
 		else
 			System.out.println("Please Enter a Valid password");
 	}
@@ -19,7 +19,7 @@ public class UserRegistration {
 		Scanner sc = new Scanner(System.in);
 		UserRegistration user = new UserRegistration();
 		System.out.println("Welcome to User Registration Program");
-		user.passWordRule2();
+		user.passWordRule3();
 
 	}
 }
